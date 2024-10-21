@@ -5,266 +5,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luffy Store</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
-            color: #333;
         }
 
         header {
-            background-color: #343a40;
+            background-color: #34495e; /* Dark Blue */
             color: white;
-            padding: 20px;
             text-align: center;
-            position: relative;
+            padding: 20px 0;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
+        header h1 {
             margin: 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
+        nav {
+            background-color: #2c3e50; /* Darker Blue */
+            padding: 10px 0;
+            text-align: center;
         }
 
-        nav ul li a {
-            color: white;
+        nav a {
+            color: #ecf0f1; /* Light Gray */
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
             transition: color 0.3s;
         }
 
-        nav ul li a:hover {
-            color: #ffc107;
+        nav a:hover {
+            color: #ff9800; /* Orange Hover Color */
         }
 
-        .hero {
-            background: linear-gradient(135deg, #007bff, #6610f2);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .btn {
-            background-color: #ffc107;
-            color: white;
-            padding: 12px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #e0a800;
-        }
-
-        .product-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        /* Container for the products */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
             padding: 20px;
-            margin: auto;
             max-width: 1200px;
+            margin: 20px auto;
         }
 
         .product {
-            background: white;
-            border: 1px solid #ccc;
+            background-color: #ffffff; /* White Background */
+            padding: 20px;
             border-radius: 8px;
-            padding: 15px;
-            margin: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: calc(30% - 40px);
             transition: transform 0.3s;
         }
 
         .product:hover {
-            transform: translateY(-5px);
+            transform: scale(1.05);
         }
 
         .product img {
             max-width: 100%;
+            height: auto;
             border-radius: 5px;
         }
 
+        .product h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #666;
+            margin: 5px 0;
+        }
+
         .price {
-            color: #28a745;
+            color: #2980b9; /* Blue Price */
             font-weight: bold;
             font-size: 1.2em;
         }
 
-        .rating {
+        .btn {
+            padding: 10px 20px;
+            background-color: #ff9800; /* Orange Button */
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68900; /* Darker Orange on Hover */
+        }
+
+        /* Dynamic Rating stars */
+        .stars {
+            display: flex;
+            justify-content: center;
             margin: 10px 0;
         }
 
-        .star {
+        .stars span {
+            font-size: 1.5em;
             cursor: pointer;
-            font-size: 24px;
-            color: #ffd700; /* Gold color for stars */
+            color: #ccc; /* Default star color */
+            transition: color 0.3s;
         }
 
+        .stars span.active {
+            color: #ffc107; /* Yellow stars when clicked */
+        }
+
+        /* Footer */
         footer {
+            background-color: #34495e; /* Dark Blue */
+            color: white;
             text-align: center;
             padding: 20px 0;
-            background-color: #343a40;
-            color: white;
-            position: relative;
+            margin-top: 30px;
         }
 
-        section {
-            padding: 40px 20px;
-            margin: 20px 0;
-            background-color: #ffffff;
+        /* Contact Us Form */
+        .contact-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff; /* White Background */
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
         }
 
-        form {
+        .contact-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .contact-container form {
             display: flex;
             flex-direction: column;
-            max-width: 500px;
-            margin: auto;
         }
 
-        form label {
-            margin-top: 10px;
+        .contact-container label {
+            margin-bottom: 5px;
+            color: #333;
         }
 
-        form input, form textarea {
+        .contact-container input,
+        .contact-container textarea {
+            margin-bottom: 15px;
             padding: 10px;
-            margin-top: 5px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
+            width: 100%;
+            transition: border 0.3s;
         }
 
-        form button {
-            margin-top: 10px;
+        .contact-container input:focus,
+        .contact-container textarea:focus {
+            border-color: #2980b9; /* Blue Border on Focus */
+            outline: none;
+        }
+
+        .contact-container button {
             padding: 10px;
-            background-color: #007bff;
+            background-color: #28a745; /* Green Button */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background-color 0.3s;
         }
 
-        form button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .product {
-                width: calc(45% - 20px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .product {
-                width: calc(100% - 20px);
-            }
+        .contact-container button:hover {
+            background-color: #218838; /* Darker Green on Hover */
         }
     </style>
-    <script>
-        function setRating(productId, rating) {
-            const display = document.getElementById(`ratingDisplay${productId}`);
-            display.innerText = `Rating: ${rating}`;
-            const stars = document.querySelectorAll(`#rating${productId} .star`);
-            stars.forEach((star, index) => {
-                if (index < rating) {
-                    star.innerHTML = '★';
-                } else {
-                    star.innerHTML = '☆';
-                }
-            });
-        }
-    </script>
 </head>
 <body>
+    <header>
+        <h1>Welcome to Luffy's Store</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
 
-<header>
-    <h1>Luffy Store</h1>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <h2>Welcome to Luffy Store!</h2>
-        <p>Your one-stop shop for everything you need!</p>
-        <a href="#products" class="btn">Shop Now</a>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-container">
-            <div class="product">
-                <img src="images/product1.jpg" alt="Product 1">
-                <h3>Product 1</h3>
-                <p>Description of Product 1.</p>
-                <p class="price">$19.99</p>
-                <div class="rating" id="rating1">
-                    <span class="star" onclick="setRating(1, 1)">★</span>
-                    <span class="star" onclick="setRating(1, 2)">★</span>
-                    <span class="star" onclick="setRating(1, 3)">★</span>
-                    <span class="star" onclick="setRating(1, 4)">★</span>
-                    <span class="star" onclick="setRating(1, 5)">★</span>
-                </div>
-                <p id="ratingDisplay1">Rating: 0</p>
-                <a href="#" class="btn">Add to Cart</a>
+    <div class="container">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product 1</h3>
+            <p>Short description of Product 1.</p>
+            <p class="price">$19.99</p>
+            <div class="stars" data-product-id="1">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
             </div>
-            <div class="product">
-                <img src="images/product2.jpg" alt="Product 2">
-                <h3>Product 2</h3>
-                <p>Description of Product 2.</p>
-                <p class="price">$29.99</p>
-                <div class="rating" id="rating2">
-                    <span class="star" onclick="setRating(2, 1)">★</span>
-                    <span class="star" onclick="setRating(2, 2)">★</span>
-                    <span class="star" onclick="setRating(2, 3)">★</span>
-                    <span class="star" onclick="setRating(2, 4)">★</span>
-                    <span class="star" onclick="setRating(2, 5)">★</span>
-                </div>
-                <p id="ratingDisplay2">Rating: 0</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-            <div class="product">
-                <img src="images/product3.jpg" alt="Product 3">
-                <h3>Product 3</h3>
-                <p>Description of Product 3.</p>
-                <p class="price">$39.99</p>
-                <div class="rating" id="rating3">
-                    <span class="star" onclick="setRating(3, 1)">★</span>
-                    <span class="star" onclick="setRating(3, 2)">★</span>
-                    <span class="star" onclick="setRating(3, 3)">★</span>
-                    <span class="star" onclick="setRating(3, 4)">★</span>
-                    <span class="star" onclick="setRating(3, 5)">★</span>
-                </div>
-                <p id="ratingDisplay3">Rating: 0</p>
-                <a href="#" class="btn">Add to Cart</a>
-            </div>
-            <!-- Add more products as needed -->
+            <a href="#" class="btn">Add to Cart</a>
         </div>
-    </section>
+        <!-- More products can go here -->
+    </div>
 
     <!-- About Us Section -->
-    <section id="about">
+    <div class="about-container" style="text-align: center; padding: 40px; background-color: #f8f9fa;">
         <h2>About Us</h2>
-        <p>Welcome to Luffy Store! We are dedicated to providing the best products for our customers. Our mission is to offer high-quality products at affordable prices.</p>
-    </section>
+        <p>Luffy's Store is dedicated to bringing you the best products at the best prices. Our team works hard to ensure customer satisfaction, and we offer a wide range of products to suit your needs.</p>
+    </div>
 
-    <!-- Contact Us
+    <!-- Contact Us Section -->
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mayplarz" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Luffy Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to handle rating system
+        document.querySelectorAll('.stars span').forEach(star => {
+            star.addEventListener('click', function() {
+                const productID = this.parentElement.getAttribute('data-product-id');
+                const ratingValue = this.getAttribute('data-value');
+                
+                // Reset previous active stars
+                this.parentElement.querySelectorAll('span').forEach(s => {
+                    s.classList.remove('active');
+                });
+                
+                // Highlight selected stars
+                for (let i = 0; i < ratingValue; i++) {
+                    this.parentElement.querySelectorAll('span')[i].classList.add('active');
+                }
+
+                alert(`You rated Product ${productID} with ${ratingValue} stars!`);
+            });
+        });
+    </script>
+</body>
+</html>
