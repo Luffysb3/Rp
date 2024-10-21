@@ -171,6 +171,20 @@
             }
         }
     </style>
+    <script>
+        function setRating(productId, rating) {
+            const display = document.getElementById(`ratingDisplay${productId}`);
+            display.innerText = `Rating: ${rating}`;
+            const stars = document.querySelectorAll(`#rating${productId} .star`);
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.innerHTML = '★';
+                } else {
+                    star.innerHTML = '☆';
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
@@ -253,11 +267,4 @@
         <p>Welcome to Luffy Store! We are dedicated to providing the best products for our customers. Our mission is to offer high-quality products at affordable prices.</p>
     </section>
 
-    <!-- Contact Us Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="mailto:saadtaourti01@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email"
+    <!-- Contact Us
