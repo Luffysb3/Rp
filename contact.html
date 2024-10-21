@@ -3,59 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luffy Store</title>
+    <title>Contact Us - Luffy Store</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #e3f2fd; /* Light Blue Background */
             color: #333;
         }
-
         header {
             background-color: #1e1e1e;
             color: white;
             text-align: center;
             padding: 20px 0;
         }
-
         nav {
             background-color: #2d572c; /* Dark Green */
             padding: 10px 0;
-            text-align: right; /* Align to the right */
-            padding-right: 20px; /* Add some right padding */
+            text-align: right;
+            padding-right: 20px;
         }
-
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
         }
-
         nav a:hover {
             color: #ff9800; /* Orange Hover Color */
         }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 20px auto;
-        }
-
-        footer {
-            background-color: #1e1e1e;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
-        }
-
-        /* Contact Us Form */
         .contact-container {
             max-width: 600px;
             margin: 20px auto;
@@ -86,29 +63,31 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%;
         }
         .contact-container button:hover {
-            background-color: #218838; /* Darker Green on Hover */
+            background-color: #218838;
+        }
+        footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Luffy's Store</h1>
+        <h1>Contact Us</h1>
         <nav>
             <a href="about.html">About Us</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Home</a>
         </nav>
     </header>
 
-    <div class="container">
-        <h2>Featured Products</h2>
-        <!-- Product listings go here -->
-    </div>
-
-    <!-- Contact Us Section -->
     <div class="contact-container">
-        <h2>Contact Us</h2>
+        <h2>Get in Touch</h2>
         <form action="https://formspree.io/f/mayplarz" method="POST">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>
