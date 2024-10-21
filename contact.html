@@ -3,89 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Luffy Store</title>
+    <title>Luffy Store</title>
     <style>
-        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
-            background-color: #34495e; /* Dark Blue */
+            background-color: #1e1e1e;
             color: white;
             text-align: center;
             padding: 20px 0;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
         nav {
-            background-color: #2c3e50; /* Darker Blue */
+            background-color: #2d572c; /* Dark Green */
             padding: 10px 0;
-            text-align: center;
+            text-align: right; /* Align to the right */
+            padding-right: 20px; /* Add some right padding */
         }
 
         nav a {
-            color: #ecf0f1; /* Light Gray */
+            color: white;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
-            transition: color 0.3s;
         }
 
         nav a:hover {
             color: #ff9800; /* Orange Hover Color */
         }
 
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
         /* Contact Us Form */
         .contact-container {
             max-width: 600px;
-            margin: 40px auto;
-            background-color: #ffffff; /* White Background */
+            margin: 20px auto;
+            background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
         .contact-container h2 {
             text-align: center;
             color: #333;
         }
-
-        .contact-container form {
-            display: flex;
-            flex-direction: column;
-        }
-
         .contact-container label {
             margin-bottom: 5px;
             color: #333;
         }
-
-        .contact-container input,
-        .contact-container textarea {
+        .contact-container input, .contact-container textarea {
             margin-bottom: 15px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             width: 100%;
-            transition: border 0.3s;
         }
-
-        .contact-container input:focus,
-        .contact-container textarea:focus {
-            border-color: #2980b9; /* Blue Border on Focus */
-            outline: none;
-        }
-
         .contact-container button {
             padding: 10px;
             background-color: #28a745; /* Green Button */
@@ -93,34 +86,29 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
-
         .contact-container button:hover {
             background-color: #218838; /* Darker Green on Hover */
-        }
-
-        footer {
-            background-color: #34495e; /* Dark Blue */
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Contact Us</h1>
+        <h1>Welcome to Luffy's Store</h1>
         <nav>
-            <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
+    <div class="container">
+        <h2>Featured Products</h2>
+        <!-- Product listings go here -->
+    </div>
+
+    <!-- Contact Us Section -->
     <div class="contact-container">
-        <h2>Get in Touch</h2>
+        <h2>Contact Us</h2>
         <form action="https://formspree.io/f/mayplarz" method="POST">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required>
