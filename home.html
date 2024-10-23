@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Grand RP</title>
+    <link rel="stylesheet" href="css.html"> <!-- Lien li kayjib CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ecf0f1;
+            color: #34495e;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        section {
+            margin: 20px 0;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #2c3e50;
+            color: #ecf0f1;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #3498db;
+        }
+        .featured-character {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .character-info {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .character-info h3 {
+            margin: 0;
+        }
+        .character-info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grand RP</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="admin.html">Admin Panel</a></li>
+                <li><a href="reports.html">Player Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Welcome to Grand RP Style</h2>
+            <p>Explore the immersive world of Grand RP where reality meets the virtual realm. Join our community and experience endless adventures!</p>
+        </section>
+
+        <section>
+            <h2>Latest News</h2>
+            <ul>
+                <li><strong>New Update:</strong> Check out the latest features added to the game!</li>
+                <li><strong>Community Event:</strong> Join us for a fun-filled evening of games and activities!</li>
+                <li><strong>Server Maintenance:</strong> Scheduled for next week. Please check our forums for more details.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Featured Characters</h2>
+            <div class="featured-character">
+                <div class="character-info">
+                    <h3>Character 1</h3>
+                    <p><strong>Role:</strong> Detective</p>
+                    <p><strong>Skills:</strong> Investigation, Stealth</p>
+                </div>
+                <div class="character-info">
+                    <h3>Character 2</h3>
+                    <p><strong>Role:</strong> Gang Leader</p>
+                    <p><strong>Skills:</strong> Negotiation, Combat</p>
+                </div>
+                <div class="character-info">
+                    <h3>Character 3</h3>
+                    <p><strong>Role:</strong> Mechanic</p>
+                    <p><strong>Skills:</strong> Repair, Crafting</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Community Highlights</h2>
+            <p>Check out some of our amazing community achievements!</p>
+            <ul>
+                <li><strong>Player of the Month:</strong> Congratulations to Player1 for their outstanding contributions!</li>
+                <li><strong>Best Role-Playing Scenario:</strong> The recent bank heist was a huge success!</li>
+                <li><strong>Event Participation:</strong> Over 100 players participated in the last community event!</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li><strong>Community Meetup:</strong> Join us for a gathering to discuss future updates. Date: 1st November 2024.</li>
+                <li><strong>Role-Playing Competition:</strong> Compete with others in our next RP challenge. Date: 15th November 2024.</li>
+                <li><strong>Holiday Special:</strong> Join us for festive events and activities throughout December.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Player Feedback</h2>
+            <form>
+                <label for="feedback-name">Name:</label>
+                <input type="text" id="feedback-name" name="feedback-name" required>
+                <label for="feedback-message">Feedback:</label>
+                <textarea id="feedback-message" name="feedback-message" required></textarea>
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </section>
+
+        <section>
+            <h2>Useful Links</h2>
+            <ul>
+                <li><a href="rules.html">Server Rules</a></li>
+                <li><a href="forums.html">Community Forums</a></li>
+                <li><a href="support.html">Support Center</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Join Us</h2>
+            <p>If you haven't joined yet, create your account now and dive into the adventure!</p>
+            <a href="register.html">Register Here</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Grand RP. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
